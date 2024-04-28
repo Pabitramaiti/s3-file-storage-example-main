@@ -1,0 +1,93 @@
+{
+	"info": {
+		"_postman_id": "2218e543-94eb-4bde-9feb-d94b90723dab",
+		"name": "s3-file-storage-example-main",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "468713"
+	},
+	"item": [
+		{
+			"name": "fileUpload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/pabit/Downloads/Manager_Architect Java Microservices JD.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/file/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fileDownload",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/file/download/1714301973566_Manager_Architect Java Microservices JD.pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"download",
+						"1714301973566_Manager_Architect Java Microservices JD.pdf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteFile",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://localhost:8080/file/delete/1714301973566_Manager_Architect Java Microservices JD.pdf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"file",
+						"delete",
+						"1714301973566_Manager_Architect Java Microservices JD.pdf"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
